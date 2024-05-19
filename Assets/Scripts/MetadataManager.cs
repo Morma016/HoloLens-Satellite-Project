@@ -32,11 +32,6 @@ public class MetadataManager : MonoBehaviour, Subscriber
             // Create a Component object for the model
             ModelComponent parentModel = new ModelComponent(modelTransform.name);
 
-            /* 
-             * Check if JSON representation already exists, if not create a blank template
-             * NOTE: If the model architecture changes, the existing JSON will need to be deleted to create
-             *          an accurate representation of the new architecture.
-             */
             string jsonFilePath = Application.persistentDataPath + "/" + modelTransform.name + ".json";
             if (File.Exists(jsonFilePath))
             {

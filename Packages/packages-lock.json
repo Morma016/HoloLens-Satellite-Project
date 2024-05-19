@@ -290,6 +290,13 @@
       },
       "url": "https://packages.unity.com"
     },
+    "com.unityfx.outline": {
+      "version": "0.8.5",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://package.openupm.com"
+    },
     "org.mixedrealitytoolkit.core": {
       "version": "file:MixedReality/org.mixedrealitytoolkit.core-3.2.0.tgz",
       "depth": 0,
@@ -298,6 +305,14 @@
         "com.unity.xr.interaction.toolkit": "2.3.0",
         "com.unity.xr.management": "4.2.1",
         "com.unity.xr.core-utils": "2.1.0"
+      }
+    },
+    "org.mixedrealitytoolkit.extendedassets": {
+      "version": "file:MixedReality/org.mixedrealitytoolkit.extendedassets-3.0.2.tgz",
+      "depth": 0,
+      "source": "local-tarball",
+      "dependencies": {
+        "org.mixedrealitytoolkit.standardassets": "3.1.0"
       }
     },
     "org.mixedrealitytoolkit.input": {
