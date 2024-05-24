@@ -104,5 +104,54 @@ public class SelectionManager : Singleton<SelectionManager>
         DebugConsole.Instance.LogDebug($"collapsing {currentSelection.name} on all levels");
         currentSelection.collapseAll();
     }
-    
+
+    public void setHighlightRed()
+    {
+        if (!currentSelection)
+        {
+            DebugConsole.Instance.LogError("Cannot set highlight as there is no current selection");
+        }
+        DebugConsole.Instance.LogDebug($"setting highlight {currentSelection.name} to red");
+        currentSelection.GetComponent<AnnotationComponent>().changeHighlightColour("Red");
+    }
+
+    public void setHighlightBlue()
+    {
+        if (!currentSelection)
+        {
+            DebugConsole.Instance.LogError("Cannot set highlight as there is no current selection");
+        }
+        DebugConsole.Instance.LogDebug($"setting highlight {currentSelection.name} to blue");
+        currentSelection.GetComponent<AnnotationComponent>().changeHighlightColour("Blue");
+    }
+
+    public void setHighlightNone()
+    {
+        if (!currentSelection)
+        {
+            DebugConsole.Instance.LogError("Cannot set highlight as there is no current selection");
+        }
+        DebugConsole.Instance.LogDebug($"setting highlight {currentSelection.name} to none");
+        currentSelection.GetComponent<AnnotationComponent>().changeHighlightColour("None");
+    }
+
+    public void setHighlightYellow()
+    {
+        if (!currentSelection)
+        {
+            DebugConsole.Instance.LogError("Cannot set highlight as there is no current selection");
+        }
+        DebugConsole.Instance.LogDebug($"setting highlight {currentSelection.name} to yellow");
+        currentSelection.GetComponent<AnnotationComponent>().changeHighlightColour("Yellow");
+    }
+
+    public void setHighlightGreen()
+    {
+        if (!currentSelection)
+        {
+            DebugConsole.Instance.LogError("Cannot set highlight as there is no current selection");
+        }
+        DebugConsole.Instance.LogDebug($"setting highlight {currentSelection.name} to green");
+        currentSelection.GetComponent<AnnotationComponent>().changeHighlightColour("Green");
+    }
 }

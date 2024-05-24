@@ -11,6 +11,10 @@ public class ModelAnnotationJson
     /// </summary>
     public string Name { get; set; }
     /// <summary>
+    /// Component highlight value
+    /// </summary>
+    public string HighlightColour { get; set; }
+    /// <summary>
     /// List of annotations
     /// </summary>
     public List<AnnotationJson> Annotations { get; set; }
@@ -22,6 +26,7 @@ public class ModelAnnotationJson
     public ModelAnnotationJson(String name)
     {
         Name = name;
+        HighlightColour = "None";
         Annotations = new List<AnnotationJson>();
         Subcomponents = new List<ModelAnnotationJson>();
     }
