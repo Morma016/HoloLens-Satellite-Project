@@ -37,11 +37,12 @@ public class AnnotationComponent : MonoBehaviour
         if(renderer != null)
         {
             this.originalColour = renderer.material.color;
+            setHighlight(this.highlightColour);
         }
     }
 
-    // private function for modifying renderer material colour and the private highlightColour identifier string
-    private void setHighlight(string newHighlight)
+    // modify renderer material colour and the private highlightColour identifier string
+    public void setHighlight(string newHighlight)
     {
         if (this.GetComponent<Renderer>() != null)
         {
@@ -67,6 +68,8 @@ public class AnnotationComponent : MonoBehaviour
                     this.GetComponent<Renderer>().material.color = originalColour;
                     this.highlightColour = newHighlight;
                     break;
+                default:
+                    break;
             }
         }
     }
@@ -85,5 +88,8 @@ public class AnnotationComponent : MonoBehaviour
         {
             renderer.gameObject.GetComponent<AnnotationComponent>().setHighlight(newHighlightColour);
         }
+
+        // update the Json
+        AnnotationManager.Instance.updateAnnotationHighlightJson(newHighlightColour);
     }
 }
